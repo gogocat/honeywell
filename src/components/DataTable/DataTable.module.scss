@@ -1,0 +1,50 @@
+$white: #fff;
+$border-color: #ffffff2b;
+$header-bg: #ffffff14;
+$hover-bg: #202020;
+
+.tableContainer {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid $border-color;
+  margin: 2rem 0;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  color: $white;
+  text-align: left;
+
+  th, td {
+    padding: 1.25rem 1.5rem;
+  }
+
+  thead {
+    background: $header-bg;
+
+    th {
+      font-weight: 600;
+      text-transform: uppercase;
+      border-bottom: 1px solid $border-color;
+    }
+  }
+
+  tbody {
+    tr {
+      border-bottom: 1px solid $border-color;
+
+      &:hover {
+        background-color: $hover-bg;
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    td {
+      vertical-align: top;
+    }
+  }
+}
