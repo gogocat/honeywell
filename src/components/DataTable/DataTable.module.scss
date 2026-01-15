@@ -48,3 +48,69 @@ $hover-bg: #202020;
     }
   }
 }
+
+@media (max-width: 600px) {
+  .tableContainer {
+    border: none;
+    margin: 1rem 0;
+  }
+
+  .table {
+    display: block;
+
+    thead {
+      display: none; // Hide headers on mobile
+    }
+
+    tbody {
+      display: block;
+
+      tr {
+        display: grid;
+        grid-template-columns: 40px 1fr;
+        gap: 0 1rem;
+        padding: 1rem;
+        border: 1px solid $border-color;
+
+        &:hover {
+          background-color: $hover-bg;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      td {
+        display: block;
+        padding: 0;
+        border: none;
+
+        // The Priority Icon column
+        &:first-child {
+          grid-column: 1;
+          grid-row: 1 / 10; // Span all stacked data rows
+          display: flex;
+          justify-content: center;
+          padding-top: 0.25rem;
+        }
+
+        // Hide the numeric priority value on mobile as we have the icon
+        &[data-label="Priority"] {
+           display: none;
+        }
+
+        // Data details column
+        &:not(:first-child) {
+          grid-column: 2;
+          margin-bottom: 1rem;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+

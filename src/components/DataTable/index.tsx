@@ -26,7 +26,9 @@ const DataTable = <T extends object>({ data }: DataTableProps<T>) => {
           {data.map((row, index) => (
             <tr key={index}>
               {headers.map((header) => (
-                <td key={`${index}-${header}`}>{row[header] as React.ReactNode ?? ''}</td>
+                <td key={`${index}-${header}`} data-label={header === 'empty' ? '' : header}>
+                  {row[header] as React.ReactNode ?? ''}
+                </td>
               ))}
             </tr>
           ))}
