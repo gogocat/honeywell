@@ -2,6 +2,12 @@
 
 A modern, responsive React application designed to display and manage incident records. This project was built as part of a frontend coding challenge.
 
+
+
+![Desktop Screenshot](desktop.png)
+
+![Mobile Screenshot](mobile.png)
+
 ## Features
 
 - **Data Fetching**: Integrates with a mock API to retrieve location and incident data.
